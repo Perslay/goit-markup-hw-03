@@ -19,16 +19,24 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-header {
+.header {
   border-bottom: 1px solid var(--cornflower);
 }
 
-header > .container,
-nav,
-.address {
-  align-items: center;
+.container {
+  margin: 0 auto;
+  padding: 0 15px;
+  width: 1158px;
+}
+
+.navigation {
   display: flex;
-  justify-content: space-around;
+  align-items: center;
+}
+
+.navigation .list {
+  display: flex;
+  gap: 40px;
 }
 
 .link {
@@ -47,6 +55,7 @@ nav,
   font-weight: 800;
   letter-spacing: 0.03em;
   line-height: 1.17;
+  margin-right: 76px;
   text-transform: uppercase;
 }
 
@@ -56,10 +65,10 @@ nav,
 
 .nav-link {
   color: var(--navy-blue);
-  font-size: 16px;
   font-weight: 500;
   letter-spacing: 0.02em;
   line-height: 1.5;
+  padding: 24px 0;
 }
 
 .list {
@@ -72,9 +81,12 @@ nav,
   font-style: normal;
 }
 
+.address > .link {
+  gap: 40px;
+}
+
 .address-link {
   color: var(--slate);
-  font-size: 16px;
   letter-spacing: 0.02em;
   line-height: 1.5;
 }
@@ -91,6 +103,7 @@ nav,
   background-color: var(--navy-blue);
   display: flex;
   justify-content: center;
+  padding: 188px 0;
 }
 
 .starting-section > .container {
@@ -105,7 +118,16 @@ nav,
   font-size: 56px;
   letter-spacing: 0.02em;
   line-height: 1.07;
+  max-width: 496px;
   text-align: center;
+}
+
+.button {
+  cursor: pointer;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  line-height: 1.5;
 }
 
 .main-button {
@@ -113,12 +135,8 @@ nav,
   border: none;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
   color: var(--white);
-  cursor: pointer;
-  font-family: "Roboto", sans-serif;
-  font-size: 16px;
-  font-weight: 500;
-  letter-spacing: 0.04em;
-  line-height: 1.5;
+  display: block;
+  min-width: 169px;
   padding: 16px 32px;
 }
 
@@ -132,8 +150,14 @@ nav,
   border-radius: 4px;
 }
 
-.hidden {
-  display: none;
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
 }
 
 .third-heading {
@@ -142,13 +166,15 @@ nav,
   font-weight: 500;
   letter-spacing: 0.02em;
   line-height: 1.2;
+  margin-bottom: 8px;
+  text-align: center;
 }
 
 .paragraph {
   color: var(--slate);
-  font-size: 16px;
   letter-spacing: 0.02em;
   line-height: 1.5;
+  text-align: center;
 }
 
 .second-heading {
@@ -157,25 +183,50 @@ nav,
   font-weight: 700;
   letter-spacing: 0.02em;
   line-height: 1.11;
+  margin-bottom: 72px;
   text-align: center;
   text-transform: capitalize;
 }
 
+.traits-list-item {
+  flex-basis: calc((100% - 72px) / 4);
+}
+
+.work-list-item,
+.portfolio-app-list-item {
+  flex-basis: calc((100% - 48px) / 3);
+}
+
 .team-section {
   background-color: var(--cloud);
+  border-radius: 0 0 4px 4px;
+  flex-basis: calc((100% - 72px) / 4);
 }
 
 .team-list-item {
   background-color: var(--white);
 }
 
+.team-member {
+  padding: 32px 16px;
+}
+
+img {
+  display: block;
+}
+
 .footer {
   background-color: var(--navy-blue);
-  padding-left: 156px;
+  padding-left: 100px 0;
 }
 
 .footer > .container {
   padding: 101.5px 0 100px 0;
+}
+
+.footer .link {
+  display: inline-block;
+  margin-bottom: 16px;
 }
 
 .footer .accent {
@@ -186,32 +237,27 @@ nav,
   color: var(--cloud);
   letter-spacing: 0.02em;
   line-height: 1.5;
-  width: 264px;
+  max-width: 264px;
 }
 
 /* portfolio */
 
 .portfolio-section .list {
   flex-wrap: wrap;
+  padding-top: 96px;
 }
 
 .portfolio-button {
   background-color: var(--cloud);
   border: 1px solid var(--cornflower);
   color: var(--iris);
-  cursor: pointer;
-  font-family: "Roboto", sans-serif;
-  font-size: 16px;
-  font-weight: 500;
-  letter-spacing: 0.04em;
-  line-height: 1.5;
   padding: 12px 24px;
 }
 
 .portfolio-button:hover,
 .portfolio-button:focus {
   background-color: var(--ocean);
-  border-color: var(--ocean);
+  border: 1px solid transparent;
   color: var(--white);
 }
 
@@ -221,4 +267,18 @@ nav,
   font-weight: 500;
   letter-spacing: 0.02em;
   line-height: 1.2;
+}
+
+.portfolio-app {
+  row-gap: 48px;
+}
+
+.portfolio-app-name {
+  border: 1px solid var(--cornflower);
+  border-top: none;
+  padding: 32px 16px;
+}
+
+.portfolio-app-name > .paragraph {
+  margin-bottom: 8px;
 }
