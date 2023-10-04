@@ -130,12 +130,12 @@ img {
   align-items: center;
 }
 
-.nav-menu {
+.nav-list {
   display: flex;
   gap: 40px;
 }
 
-.nav-menu-li {
+.nav-li {
   padding: 24px 0;
 }
 
