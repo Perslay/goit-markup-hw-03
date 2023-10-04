@@ -229,6 +229,7 @@ img {
 
 .footer {
   background-color: var(--navy-blue);
+  padding: 100px 0;
 }
 
 .footer > .container {
