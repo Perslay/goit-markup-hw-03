@@ -19,37 +19,13 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-.header {
-  border-bottom: 1px solid var(--cornflower);
-}
-
 .container {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   margin: 0 auto;
   padding: 0 15px;
   width: 1158px;
-}
-
-.navigation {
-  display: flex;
-  align-items: center;
-}
-
-.nav-menu {
-  display: flex;
-  gap: 40px;
-}
-
-.nav-menu-li {
-  padding: 24px 0;
-}
-
-.nav-link {
-  color: var(--navy-blue);
-  font-weight: 500;
-  letter-spacing: 0.02em;
-  line-height: 1.5;
-  padding: 24px 0;
 }
 
 .link {
@@ -82,22 +58,6 @@ body {
   list-style: none;
 }
 
-.address {
-  display: flex;
-  font-style: normal;
-  gap: 40px;
-}
-
-.address > .list {
-  gap: 40px;
-}
-
-.address-link {
-  color: var(--slate);
-  letter-spacing: 0.02em;
-  line-height: 1.5;
-}
-
 .section {
   padding: 120px 0;
 }
@@ -106,55 +66,12 @@ body {
   justify-content: center;
 }
 
-.starting-section {
-  background-color: var(--navy-blue);
-  display: flex;
-  justify-content: center;
-  padding: 188px 0;
-}
-
-.starting-section > .container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  width: 496px;
-}
-
-.first-heading {
-  color: var(--white);
-  font-size: 56px;
-  letter-spacing: 0.02em;
-  line-height: 1.07;
-  max-width: 496px;
-  text-align: center;
-}
-
 .button {
   cursor: pointer;
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   letter-spacing: 0.04em;
   line-height: 1.5;
-}
-
-.main-button {
-  background-color: var(--iris);
-  border: none;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
-  color: var(--white);
-  display: block;
-  min-width: 169px;
-  padding: 16px 32px;
-}
-
-.main-button:hover,
-.main-button:focus {
-  background-color: var(--ocean);
-}
-
-.main-button,
-.portfolio-button {
-  border-radius: 4px;
 }
 
 .visually-hidden {
@@ -198,22 +115,106 @@ body {
   text-transform: capitalize;
 }
 
-.traits-list-item {
+img {
+  display: block;
+}
+
+/* header */
+
+.header {
+  border-bottom: 1px solid var(--cornflower);
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 40px;
+}
+
+.nav-menu-li {
+  padding: 24px 0;
+}
+
+.nav-link {
+  color: var(--navy-blue);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  line-height: 1.5;
+  padding: 24px 0;
+}
+
+.address {
+  display: flex;
+  font-style: normal;
+  gap: 40px;
+}
+
+.address > .list {
+  gap: 40px;
+}
+
+.address-link {
+  color: var(--slate);
+  letter-spacing: 0.02em;
+  line-height: 1.5;
+}
+
+/* main studio */
+
+.starting-section {
+  background-color: var(--navy-blue);
+  display: flex;
+  justify-content: center;
+  padding: 188px 0;
+}
+
+.starting-section > .container {
+  width: 496px;
+}
+
+.first-heading {
+  color: var(--white);
+  font-size: 56px;
+  letter-spacing: 0.02em;
+  line-height: 1.07;
+  max-width: 496px;
+  text-align: center;
+}
+
+.main-button {
+  background-color: var(--iris);
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  color: var(--white);
+  display: block;
+  min-width: 169px;
+  padding: 16px 32px;
+}
+
+.main-button:hover,
+.main-button:focus {
+  background-color: var(--ocean);
+}
+
+.traits-li {
   flex-basis: calc((100% - 72px) / 4);
 }
 
-.work-section .list,
-.portfolio-app {
+.work-li,
+.portfolio-app-li {
   flex-basis: calc((100% - 48px) / 3);
 }
 
 .team-section {
   background-color: var(--cloud);
-  border-radius: 0 0 4px 4px;
-  flex-basis: calc((100% - 72px) / 4);
 }
 
-.team-list-item {
+.team-li {
   background-color: var(--white);
   border-radius: 0 0 4px 4px;
   flex-basis: calc((100% - 72px) / 4);
@@ -223,9 +224,7 @@ body {
   padding: 32px 0;
 }
 
-img {
-  display: block;
-}
+/* footer */
 
 .footer {
   background-color: var(--navy-blue);
@@ -269,6 +268,7 @@ img {
 .portfolio-button {
   background-color: var(--cloud);
   border: 1px solid var(--cornflower);
+  border-radius: 4px;
   color: var(--iris);
   padding: 12px 24px;
 }
@@ -287,6 +287,7 @@ img {
   letter-spacing: 0.02em;
   line-height: 1.2;
   margin-bottom: 8px;
+  text-align: center;
 }
 
 .portfolio-app {
