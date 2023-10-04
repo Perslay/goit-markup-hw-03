@@ -88,7 +88,7 @@ body {
   gap: 40px;
 }
 
-.address > .link {
+.address > .list {
   gap: 40px;
 }
 
@@ -202,8 +202,8 @@ body {
   flex-basis: calc((100% - 72px) / 4);
 }
 
-.work-list-item,
-.portfolio-app-li {
+.work-section .list,
+.portfolio-app {
   flex-basis: calc((100% - 48px) / 3);
 }
 
