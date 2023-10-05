@@ -250,8 +250,11 @@ img {
 }
 
 .footer .link {
-  display: inline-block;
   margin-bottom: 16px;
+}
+
+.link.logo {
+  display: inline-block;
 }
 
 .footer .accent {
